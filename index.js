@@ -9,9 +9,15 @@ app.get('/',(req,res) =>{
 })
 
 const root = {
-    hello : () =>"Hi,I'm omer"
-
-};
+    friend : () =>{
+        return {
+            "id" :21641654,
+            "firstName":"omer",
+            "lastName":"michleviz",
+            "gender":"male",
+            "email" :"me@me.com"
+        }
+    }};
 
 app.use('/graphql',graphqlHTTP({
     schema:schema,
